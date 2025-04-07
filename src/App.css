@@ -101,7 +101,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #0F0F15 0%, #1a1a2e 100%);
+  background: url('./assets/image_fx.jpg') no-repeat center center fixed;
+  background-size: cover;
   padding: 20px;
   font-family: 'Space Grotesk', sans-serif;
   position: relative;
