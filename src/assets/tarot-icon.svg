@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- 月亮图标 -->
+  <path d="M50 15C29.5 15 13 31.5 13 52S29.5 89 50 89c16.5 0 30.7-10.8 35.5-25.7 1-3.1-2.3-5.7-5.1-4.1-5.9 3.3-12.8 5.2-20.1 5.2-22.6 0-41-18.4-41-41 0-7.3 1.9-14.2 5.2-20.1 1.6-2.8-1-6.1-4.1-5.1C15.8 19.3 5 33.5 5 50c0 24.9 20.1 45 45 45s45-20.1 45-45S74.9 5 50 5c-1.4 0-2.8.1-4.2.2-2.8.3-4.3 3.4-2.9 5.8 2.8 4.8 4.4 10.4 4.4 16.4 0 18-14.6 32.6-32.6 32.6-6 0-11.6-1.6-16.4-4.4-2.4-1.4-5.5.1-5.8 2.9-.1 1.4-.2 2.8-.2 4.2 0 24.9 20.1 45 45 45s45-20.1 45-45c0-24.9-20.1-45-45-45z" fill="#6C4BED" opacity="0.8"/>
+  <!-- 星星装饰 -->
+  <circle cx="25" cy="30" r="2" fill="#2D8CFF" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.3;0.9" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="75" cy="25" r="1.5" fill="#2D8CFF" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="65" cy="70" r="2" fill="#2D8CFF" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" />
+  </circle>
+</svg>

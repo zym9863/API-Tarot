@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150" width="100" height="150">
+  <!-- 塔罗牌背景 -->
+  <rect x="5" y="5" width="90" height="140" rx="5" ry="5" fill="#0F0F15" stroke="#6C4BED" stroke-width="2" opacity="0.9" />
+  
+  <!-- 卡片装饰边框 -->
+  <rect x="10" y="10" width="80" height="130" rx="3" ry="3" fill="none" stroke="#2D8CFF" stroke-width="1" stroke-dasharray="2,2" opacity="0.6" />
+  
+  <!-- 中心神秘符号 -->
+  <circle cx="50" cy="50" r="20" fill="none" stroke="#6C4BED" stroke-width="1.5" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="4s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- 五角星 -->
+  <path d="M50 30l5.5 11.2 12.3 1.8-8.9 8.7 2.1 12.3-11-5.8-11 5.8 2.1-12.3-8.9-8.7 12.3-1.8z" fill="#2D8CFF" opacity="0.7" />
+  
+  <!-- 月亮符号 -->
+  <path d="M50 85c-5.5 0-10 4.5-10 10s4.5 10 10 10c4.5 0 8.3-3 9.5-7 0.3-1-0.6-1.5-1.3-1.1-1.5 0.9-3.3 1.4-5.2 1.4-5.8 0-10.5-4.7-10.5-10.5 0-1.9 0.5-3.7 1.4-5.2 0.4-0.7-0.1-1.6-1.1-1.3-3.9 1.2-6.8 4.9-6.8 9.2 0 5.5 4.5 10 10 10s10-4.5 10-10-4.5-10-10-10z" fill="#6C4BED" opacity="0.8" />
+  
+  <!-- 装饰线条 -->
+  <line x1="20" y1="120" x2="80" y2="120" stroke="#2D8CFF" stroke-width="1" opacity="0.5" />
+  <line x1="30" y1="125" x2="70" y2="125" stroke="#2D8CFF" stroke-width="1" opacity="0.5" />
+  <line x1="40" y1="130" x2="60" y2="130" stroke="#2D8CFF" stroke-width="1" opacity="0.5" />
+  
+  <!-- 闪烁星星 -->
+  <circle cx="20" cy="20" r="1" fill="#ffffff" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="80" cy="20" r="1" fill="#ffffff" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="20" cy="130" r="1" fill="#ffffff" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="80" cy="130" r="1" fill="#ffffff" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="6s" repeatCount="indefinite" />
+  </circle>
+</svg>

@@ -1,0 +1,367 @@
+/* 添加星星动画 */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 1;
+  animation: twinkle 5s ease-in-out forwards;
+}
+
+/* 导入字体 */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0; transform: scale(0); }
+  20% { opacity: 0.8; transform: scale(1.2); }
+  40% { opacity: 0.4; transform: scale(0.8); }
+  60% { opacity: 0.8; transform: scale(1); }
+  80% { opacity: 0.4; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(0); }
+}
+
+/* 神秘符号装饰 */
+.mystical-symbols {
+  position: absolute;
+  width: 100px;
+  height: 300px;
+  z-index: 2;
+  opacity: 0.3;
+}
+
+.left-symbols {
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-symbols {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.symbol {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+.moon {
+  top: 20%;
+  left: 10%;
+  background-image: url('./assets/tarot-icon.svg');
+  animation-delay: 0s;
+}
+
+.star-symbol {
+  top: 60%;
+  left: 30%;
+  background-image: url('./assets/star-icon.svg');
+  animation-delay: 1s;
+}
+
+.tarot-symbol {
+  top: 30%;
+  right: 10%;
+  background-image: url('./assets/tarot-card.svg');
+  animation-delay: 2s;
+}
+
+.crystal-symbol {
+  bottom: 20%;
+  right: 30%;
+  background-image: url('./assets/crystal-ball.svg');
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0F0F15 0%, #1a1a2e 100%);
+  padding: 20px;
+  font-family: 'Space Grotesk', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 添加背景星星 */
+.stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.tarot-card {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(15, 15, 21, 0.95);
+  border-radius: 15px;
+  border: 1px solid rgba(108, 75, 237, 0.3);
+  box-shadow: 0 8px 32px rgba(108, 75, 237, 0.2), 0 0 15px rgba(45, 140, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.tarot-card:hover {
+  box-shadow: 0 12px 48px rgba(108, 75, 237, 0.3);
+  transform: translateY(-2px);
+}
+
+.tarot-card .ant-card-head {
+  border-bottom: 1px solid rgba(108, 75, 237, 0.3);
+  background: linear-gradient(135deg, #6C4BED 0%, #2D8CFF 100%);
+  border-radius: 15px 15px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.tarot-card .ant-card-head::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  animation: shimmer 5s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.tarot-card .ant-card-head-title {
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5em;
+  text-shadow: 0 0 10px rgba(108, 75, 237, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarot-card .ant-card-head-title::before,
+.tarot-card .ant-card-head-title::after {
+  content: '✧';
+  margin: 0 10px;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.7);
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1.2); }
+}
+
+.tarot-card .ant-input,
+.tarot-card .ant-input-password {
+  background: rgba(15, 15, 21, 0.8);
+  border: 1px solid rgba(108, 75, 237, 0.3);
+  border-radius: 8px;
+  color: white;
+  transition: all 0.3s ease;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.tarot-card .ant-input:hover,
+.tarot-card .ant-input-password:hover {
+  border-color: #6C4BED;
+  box-shadow: 0 0 10px rgba(108, 75, 237, 0.2);
+}
+
+.tarot-card .ant-input:focus,
+.tarot-card .ant-input-password:focus {
+  border-color: #2D8CFF;
+  box-shadow: 0 0 15px rgba(45, 140, 255, 0.3);
+}
+
+.tarot-card .ant-btn {
+  background: linear-gradient(135deg, #6C4BED 0%, #2D8CFF 100%);
+  border: none;
+  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  height: 45px;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tarot-card .ant-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tarot-card .ant-btn:hover::after {
+  opacity: 1;
+  animation: ripple 1s linear;
+}
+
+@keyframes ripple {
+  0% { transform: scale(0.3); opacity: 0.1; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+.tarot-card .ant-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(108, 75, 237, 0.4);
+}
+
+.loading-container {
+  text-align: center;
+  margin-top: 20px;
+  color: #2D8CFF;
+}
+
+.loading-container .ant-spin-dot-item {
+  background-color: #6C4BED;
+}
+
+.loading-container p {
+  margin-top: 15px;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #2D8CFF;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #2D8CFF, 0 0 10px #2D8CFF, 0 0 15px #6C4BED;
+  }
+  to {
+    text-shadow: 0 0 10px #2D8CFF, 0 0 20px #2D8CFF, 0 0 30px #6C4BED;
+  }
+}
+
+.result-card {
+  margin-top: 20px;
+  background: rgba(15, 15, 21, 0.8);
+  border: 1px solid rgba(0, 207, 146, 0.3);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 207, 146, 0.2);
+  animation: appear 0.5s ease-out forwards;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.result-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  20% { left: 100%; }
+  100% { left: 100%; }
+}
+
+.result-card .ant-card-head {
+  background: linear-gradient(135deg, #00CF92 0%, #2D8CFF 100%);
+  border-radius: 12px 12px 0 0;
+  position: relative;
+}
+
+.result-card .ant-card-head-title {
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 10px rgba(0, 207, 146, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-card .ant-card-head-title::before,
+.result-card .ant-card-head-title::after {
+  content: '★';
+  margin: 0 10px;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.8);
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.result-card pre {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.result-card pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: rgba(15, 15, 21, 0.6);
+  padding: 15px;
+  border-radius: 8px;
+  font-family: 'Space Grotesk', monospace;
+  line-height: 1.6;
+  color: #00CF92;
+  border: 1px solid rgba(0, 207, 146, 0.2);
+}
+
+.ant-message .ant-message-notice-content {
+  background: rgba(15, 15, 21, 0.9);
+  border: 1px solid #FF4D4D;
+  color: #FF4D4D;
+  font-family: 'Space Grotesk', sans-serif;
+}

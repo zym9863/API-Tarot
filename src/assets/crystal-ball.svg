@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- 水晶球底座 -->
+  <path d="M35 75 C 35 85, 65 85, 65 75" stroke="#6C4BED" stroke-width="3" fill="none" />
+  <ellipse cx="50" cy="75" rx="15" ry="3" fill="#2D8CFF" opacity="0.5" />
+  
+  <!-- 水晶球 -->
+  <circle cx="50" cy="45" r="30" fill="url(#crystal-gradient)" opacity="0.8" />
+  <circle cx="50" cy="45" r="30" fill="none" stroke="#6C4BED" stroke-width="1" />
+  
+  <!-- 水晶球内部光效 -->
+  <circle cx="40" cy="35" r="5" fill="#ffffff" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- 神秘符号 -->
+  <path d="M50 25l5 10-10 5 10 5-5 10 5-10 10-5-10-5z" fill="#6C4BED" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="5s" repeatCount="indefinite" />
+  </path>
+  
+  <!-- 光晕效果 -->
+  <circle cx="50" cy="45" r="35" fill="none" stroke="#2D8CFF" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="r" values="35;38;35" dur="6s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="6s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- 渐变定义 -->
+  <defs>
+    <radialGradient id="crystal-gradient" cx="40%" cy="40%" r="60%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="40%" stop-color="#2D8CFF" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#6C4BED" stop-opacity="0.2" />
+    </radialGradient>
+  </defs>
+</svg>

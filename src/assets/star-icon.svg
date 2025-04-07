@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- 星星图标 -->
+  <path d="M50 5l12.1 24.5L89 33.8l-19.5 19L75.2 80 50 67.8 24.8 80l5.7-27.2L11 33.8l26.9-4.3z" fill="#2D8CFF" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="4s" repeatCount="indefinite" />
+  </path>
+  <!-- 装饰光芒 -->
+  <path d="M50 15v70M15 50h70M26 26l48 48M26 74l48-48" stroke="#2D8CFF" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="5s" repeatCount="indefinite" />
+  </path>
+  <!-- 中心点 -->
+  <circle cx="50" cy="50" r="3" fill="#6C4BED">
+    <animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite" />
+  </circle>
+</svg>
