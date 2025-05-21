@@ -5,8 +5,8 @@ import axios from 'axios'
 import './App.css'
 
 const API_MODELS = [
-  'google/gemini-2.0-flash-thinking-exp:free',
-  'google/gemini-2.0-flash-exp:free',
+  'deepseek/deepseek-chat-v3-0324:free',
+  'qwen/qwen3-235b-a22b:free',
   'google/gemma-3-27b-it:free'
 ]
 
