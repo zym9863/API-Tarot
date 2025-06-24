@@ -5,7 +5,7 @@ import axios from 'axios'
 import './App.css'
 
 const API_MODELS = [
-  'deepseek/deepseek-chat-v3-0324:free',
+  'deepseek/deepseek-r1-0528:free',
   'qwen/qwen3-235b-a22b:free',
   'google/gemma-3-27b-it:free'
 ]
